@@ -48,7 +48,11 @@ One line per inference group. Multiple tensor files on a line are separated
 by spaces and must follow the graph's input order, obtained from the
 artifact metadata. Use `--use_native_input_files` only when reading
 natively typed quantized data; otherwise the runtime reads floats and
-quantizes them.
+quantizes them. `scripts/asr_workload.py` writes uint8/uint16 tensors in
+`quantize()` and must pass this flag. A/B verification on the Whisper
+encoder showed that omitting it does not fail the load but changes the
+output tensor width (fp32 vs fp16) and the values (correlation 0.9516 on
+`k_cache_cross_0`).
 
 ## 5. Backend matrix (TC-RT-03 .. TC-RT-08)
 

@@ -79,6 +79,7 @@ def run_net(binary, files, output_dir):
             "--backend", BACKEND,
             "--input_list", list_path,
             "--output_dir", output_dir,
+            "--use_native_input_files",
         ],
         env=ENV,
         capture_output=True,
