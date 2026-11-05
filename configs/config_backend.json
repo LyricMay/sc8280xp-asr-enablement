@@ -1,0 +1,14 @@
+{
+  "graphs": [
+    {
+      "graph_names": ["<GRAPH_NAME>"],
+      "vtcm_mb": 0
+    }
+  ],
+  "devices": [
+    {
+      "dsp_arch": "v68",
+      "soc_id": 37
+    }
+  ]
+}

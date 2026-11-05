@@ -1,0 +1,48 @@
+site_name: SC8280XP ASR Model Enablement and Compatibility
+site_description: Model enablement and compatibility record for QAIRT/QNN on SC8280XP (Hexagon HTP v68)
+site_url: https://lyricmay.github.io/sc8280xp-asr-enablement/
+repo_url: https://github.com/LyricMay/sc8280xp-asr-enablement
+repo_name: LyricMay/sc8280xp-asr-enablement
+
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+
+nav:
+  - Home: index.md
+  - Compatibility Matrix: COMPATIBILITY-MATRIX.md
+  - Errata: ERRATA.md
+  - Test Procedure: TEST-PROCEDURE.md
+  - ASR Workload: ASR-WORKLOAD.md
+  - Environment Guide: ENVIRONMENT.md
+  - Glossary: GLOSSARY.md
