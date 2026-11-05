@@ -107,8 +107,16 @@ toward the blank class.
   `--quantization_overrides` path retains unquantized float tensors and the
   offline compiler rejects the mixed-precision graph on v68
 
-**Status:** open. This is a model/hardware quantization-accuracy limit, not
-a runtime or toolchain defect.
+**Status:** open. The measured correlation loss is established for the
+evaluated W8A8 PTQ configurations. The cause is not yet isolated. The
+following have not been ruled out: numerical change during ONNX-to-DLC
+conversion, calibration preprocessing differing from the original frontend,
+a single dominant Conformer operator or normalization layer, and a mismatch
+in quantization encodings, output tensor order or layout. Intermediate
+tensor-level error comparison has not been performed.
+
+This entry is separate from ERRATA-003 and ERRATA-007, which concern
+context binary SoC binding and on-device generated artifacts.
 
 ---
 
